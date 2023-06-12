@@ -20,9 +20,11 @@ and achieve faster inference speed with half the number of GPUs compared to FP16
 ## Installation
 
 ```bash
-conda create -n smoothquant python=3.8
+conda create -n smoothquant python=3.8 -y
 conda activate smoothquant
-pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+# pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia -y
+
 pip install transformers accelerate datasets zstandard
 
 python setup.py install
